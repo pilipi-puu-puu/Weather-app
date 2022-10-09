@@ -6,7 +6,7 @@ const TempApp = () => {
     const [city, setCity] = useState(null);
     const [search, setSearch] = useState("");
 
-    useEffect(() => {
+    useEffect(() => {       // useEffect is a hook jeta data fetching, DOM update korte allow kore.
         const fetchAPI = async () => {
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=cb183e180a1c590548d78ae865000a77`
             const response = await fetch(url);
@@ -20,8 +20,8 @@ const TempApp = () => {
         <>
             <div className="box">
                 <div className="inputData">
-                    <input type="search" className='inputField' value={search} onChange={(event) => { setSearch(event.target.value) }} />
-                </div>
+                    <input type="search" className='inputField' value={search} onChange={(event) => { setSearch(event.target.value) }} /> 
+                </div>                      
 
                 {!city ? (
                     <p className='errorMsg'>No Data Found</p>
