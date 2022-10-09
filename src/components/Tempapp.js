@@ -20,9 +20,9 @@ const TempApp = () => {
         <>
             <div className="box">
                 <div className="inputData">
-                    <input type="search" className='inputField' value={search} onChange={(event) => { setSearch(event.target.value) }} /> 
-                </div>                      
-
+                    <input type="search" className='inputField' value={search} onChange={(event) => { setSearch(event.target.value) }} />  
+                </div>      
+// onChange is a event handler jeta input change ke check/search kore.
                 {!city ? (
                     <p className='errorMsg'>No Data Found</p>
                 ) : (<>
